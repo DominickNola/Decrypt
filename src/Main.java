@@ -18,7 +18,7 @@ public class Main {
         R[1] = 0x00000000;
         R[2] = 0x00000000;
 
-        System.out.println("Decryption:");
+        System.out.println("\nDecryption:");
         PrintStream obj = new PrintStream(new File("tst_Decryption.txt"));
         List<String> list = new ArrayList<>();
         Scanner stdin = new Scanner(System.in);
@@ -96,7 +96,7 @@ public class Main {
                 b = L[i] + DeltaOne;
             }
             long c = (L[i] >> 5) + K[i + 1 -j];
-            long d = a + b + c;
+            long d = a ^ b ^ c;
             long e = R[i] - d;
             L[i - 1] = e;
             R[i - 1] = L[i];
