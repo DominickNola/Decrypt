@@ -56,7 +56,7 @@ public class Main {
 
         String[] arr = list.toArray(new String[0]);
         System.out.println();
-        System.out.println("K Array is " + Arrays.toString(arr));
+        System.out.println("K[] = " + Arrays.toString(arr));
 
         decrypt();
 
@@ -70,16 +70,6 @@ public class Main {
         //text file, should be opening in default text editor
         File file = new File("tst_Decryption.txt");
 
-        //first check if Desktop is supported by Platform or not
-        if(!Desktop.isDesktopSupported()){
-            System.out.println("Desktop is not supported");
-            return;
-        }
-
-        // OPEN FILE
-        Desktop desktop = Desktop.getDesktop();
-        if(file.exists()) desktop.open(file);
-
     }
 
     private static void decrypt() {
@@ -88,6 +78,7 @@ public class Main {
 
         for(int i = 2; i > 0; i--) {
             long a = (L[i] << 4) + K[i-j];
+            a = removeCarry(a);
             long b;
             // toggle between them
             if(j == 0) {
@@ -95,9 +86,12 @@ public class Main {
             } else {
                 b = L[i] + DeltaOne;
             }
+            b = removeCarry(b);
             long c = (L[i] >> 5) + K[i + 1 -j];
+            c = removeCarry(c);
             long d = a ^ b ^ c;
             long e = R[i] - d;
+            e = removeCarry(e);
             L[i - 1] = e;
             R[i - 1] = L[i];
             System.out.println("L[" + (i-1) + "] = " + Long.toHexString(L[i-1]) +
@@ -109,6 +103,17 @@ public class Main {
             }
         }
         return;
+    }
+
+    // borrowed this method from Gil Liebovich:
+    public static long removeCarry(long num) {
+        // Use only last 32 bits (eliminating the carry)
+        String str = String.format("%08X", num);
+        if (str.length() > 8) {
+            str = str.substring(str.length() - 8);
+            num = Long.parseLong(str, 16);
+        }
+        return num;
     }
 
 }
