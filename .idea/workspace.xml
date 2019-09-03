@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5e75f76-9bed-44d7-afad-e842aa49fef0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tst_Decryption.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tst_Decryption.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +20,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
+            <state relative-caret-position="206">
               <caret line="93" column="31" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -44,8 +42,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="749" />
-    <option name="y" value="27" />
+    <option name="x" value="751" />
+    <option name="y" value="25" />
     <option name="width" value="686" />
     <option name="height" value="842" />
   </component>
@@ -106,7 +104,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="749" y="27" width="686" height="842" extended-state="0" />
+    <frame x="751" y="25" width="686" height="842" extended-state="0" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -146,7 +144,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="206">
           <caret line="93" column="31" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
